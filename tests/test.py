@@ -13,6 +13,8 @@ def test():
         dropout = 0.1,
         emb_dropout = 0.1
     )
+    n_p = sum(x.numel() for x in v.parameters())
+    print(f"Total number of parameters: {n_p}")
 
     img = torch.randn(2, 3, 256, 256)
 
